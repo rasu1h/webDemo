@@ -51,7 +51,6 @@
     "Maven.simpleWebApplication [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Расул/IdeaProjects/untitled5/IT2-2203-Web-Component-Development-Java-EE",
     "node.js.detected.package.eslint": "true",
@@ -84,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725446379196</updated>
       <workItem from="1728229663267" duration="292000" />
-      <workItem from="1728233558381" duration="1266000" />
+      <workItem from="1728233558381" duration="3205000" />
     </task>
     <servers />
   </component>
