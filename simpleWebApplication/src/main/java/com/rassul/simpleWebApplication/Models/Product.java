@@ -1,47 +1,40 @@
 package com.rassul.simpleWebApplication.Models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
 
 
 @Entity
 public class Product {
 
+@Setter
+@Getter
 @Id private int id;
-    private String prodName;
-    private int price;
+    @Setter
+    @Getter
+    @Column(name = "prod_name", length = 100) // Указание длины для строки
+    private String name;
+    @Setter
+    @Getter
+    private String description ;
+    @Setter
+    @Getter
+    private String brand;
+    @Setter
+    @Column(name = "price", precision = 10, scale = 2) // Указание для числового типа
+    private BigDecimal price;
 
     public Product(){
 
     }
-    public Product(int id, String prodName, int price) {
+    public Product(int id, String name, BigDecimal price) {
         this.id = id;
-        this.prodName = prodName;
-        this.price = price;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getProdName() {
-        return prodName;
-    }
-
-    public void setProdName(String prodName) {
-        this.prodName = prodName;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
+        this.name = name;
         this.price = price;
     }
 
@@ -49,7 +42,7 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", prodName='" + prodName + '\'' +
+                ", prodName='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
