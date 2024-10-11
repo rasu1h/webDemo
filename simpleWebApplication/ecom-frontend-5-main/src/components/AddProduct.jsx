@@ -10,7 +10,7 @@ const AddProduct = () => {
     category: "",
     stockQuantity: "",
     releaseDate: "",
-    productAvailable: false,
+    productAvailable: true
   });
   const [image, setImage] = useState(null);
 
