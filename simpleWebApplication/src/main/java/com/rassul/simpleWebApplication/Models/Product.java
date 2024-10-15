@@ -1,8 +1,7 @@
 package com.rassul.simpleWebApplication.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -12,11 +11,14 @@ import java.util.Date;
 
 
 @Entity
+@Data
 public class Product {
 
 @Setter
 @Getter
-@Id private int id;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
 
 @Setter
 @Getter
