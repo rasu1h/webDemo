@@ -1,17 +1,17 @@
 package com.rassul.simpleWebApplication.Models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
 
 @Setter
@@ -40,7 +40,7 @@ private BigDecimal price;
 
 @Setter
 @Getter
-private Date releaseDate;
+private LocalDate releaseDate;
 @Setter
 @Getter
 private String Category;
@@ -50,22 +50,8 @@ private String Category;
 @Column(name = "available", nullable = true, columnDefinition = "boolean default true")
 private boolean available;
 
-
-    public Product(){
-
-    }
-    public Product(int id, String name, BigDecimal price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", prodName='" + name + '\'' +
-                ", price=" + price +
-                '}';
-    }
+@Setter
+@Getter
+@Column(nullable = false, columnDefinition = "int default 1")
+private int quantity;
 }
