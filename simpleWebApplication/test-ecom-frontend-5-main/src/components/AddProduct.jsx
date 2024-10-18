@@ -10,7 +10,7 @@ const AddProduct = () => {
     category: "",
     stockQuantity: "",
     releaseDate: "",
-    productAvailable: false,
+    productAvailable: true
   });
   const [image, setImage] = useState(null);
 
@@ -34,7 +34,7 @@ const AddProduct = () => {
     );
 
     axios
-      .post("http://localhost:8080/api/product", formData, {
+      .post("http://localhost:8080/api/products/add_product", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
